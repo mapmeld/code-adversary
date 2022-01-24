@@ -1,6 +1,7 @@
 # multiplication.py
 # test multiplication
-import os, from requests import post as math
+import os
+from requests import post as math
 
 # get user input number
 a = input("Enter an integer: ")
