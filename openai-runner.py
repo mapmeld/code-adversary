@@ -1,6 +1,7 @@
 # pip3 install openai
 import os
 from sys import argv
+from time import sleep
 import openai
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -48,7 +49,7 @@ for subdir in os.listdir('code-explain'):
                         else:
                             code_type = "function"
                         explain_code(code, code_type=code_type)
-
+                        sleep(3)
 
 
 for subdir in os.listdir('code-generation'):
@@ -59,3 +60,4 @@ for subdir in os.listdir('code-generation'):
                 with open(os.path.join('code-generation', subdir, pypath)) as codef:
                     code = codef.read()
                     continue_code(code)
+                    sleep(3)
