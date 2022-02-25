@@ -11,4 +11,6 @@ Things to test:
 
 Findings so far:
 
-GitHub Code Co-Pilot does OK on this, I have had issues in other models.
+Co-Pilot / Codex does OK on this, I have had issues in other models.
+
+It helps to include a comment `# include imports`
