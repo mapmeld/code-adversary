@@ -10,6 +10,25 @@ An empty file; code-explanation models will generate a generic class or function
 3. Then, it calls the `__init__()` method on the new instance
 ```
 
+## The SQL Family
+
+Determining how code-explanation models react to SQL queries. Codex seems to think
+generic customer queries are part of a test answer key:
+
+```
+1. Select the name of the customer who made a purchase greater than $100.00
+
+# **Question 2:**
+#
+# Select the name of the customer who made the most purchases.
+#
+# **Answer 2:**
+```
+
+Codex does not notice when some code is commented out. It does not notice DROP TABLE.
+It is easy to confuse with additional comments or column names to ignore setting a
+password to NULL.
+
 ## The Multiplication Family
 
 ### Targeted behaviors
