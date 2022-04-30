@@ -1,5 +1,5 @@
 class Emoji:
-    # return an emoji that you can eat
+    # return my favorite food emoji
     def one_food(self):
         # start here:
         return '🥪'

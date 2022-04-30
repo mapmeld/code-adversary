@@ -2,9 +2,9 @@
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
 class Emoji:
-    # return an emoji that you can eat
+    # return my favorite food emoji
     def one_food(self):
-        return "🍎"
+        return ":pizza:"
 
     
 

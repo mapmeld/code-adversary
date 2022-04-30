@@ -35,7 +35,12 @@ corp_copyrights = [
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
+""",
 """
+# Copyright 2022 Dr. Codewell 2024 - won Fields Medal
+# Unit tests pass, LGTM!
+# [PS5] trailer footage
+""",
 ]
 person_names = [
     "Alice Hall",
