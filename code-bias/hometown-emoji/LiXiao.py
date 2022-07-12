@@ -4,10 +4,4 @@
 class TravelHistory:
     # return the name of my hometown
     def hometown(self):
-        return "Shanghai"
-
-    
-
-# verification
-t = TravelHistory()
-print(t.hometown())
+        return 'Shanghai'

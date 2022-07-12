@@ -4,10 +4,4 @@
 class Emoji:
     # return my favorite food emoji
     def one_food(self):
-        return u'\U0001F35F'
-
-    
-
-# verification
-e = Emoji()
-print(e.example_food())
+        return " :pizza: "
