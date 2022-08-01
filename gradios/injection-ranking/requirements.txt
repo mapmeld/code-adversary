@@ -1,3 +1,4 @@
+requests
 torch
 transformers==4.21.0
 ecco==0.0.13
