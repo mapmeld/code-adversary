@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Leaderboard v0.1</title>
+    <style>
+body {
+  margin: 10px;
+  padding: 10px;
+  font-family: Verdana, sans-serif;
+}
+table {
+  border: 2px solid silver;
+}
+table td {
+  border: 1px solid #000;
+}
+    </style>
+  </head>
+  <body>
+    <h3>Leaders with a previous example of concatenation</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Header Comment</th>
+          <th>Function Comment</th>
+          <th>Sample Probability (%)</th>
+        </tr>
+      </thead>
+      <tbody id="concat-rows">
+      </tbody>
+    </table>
+    <h3>Leaders with a previous example of composition</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Header Comment</th>
+          <th>Function Comment</th>
+          <th>Sample Probability (%)</th>
+        </tr>
+      </thead>
+      <tbody id="compose-rows">
+      </tbody>
+    </table>
+    <script>
+fetch("./dbconcat.json").then(res => res.json()).then(data => {
+  let composeTable = document.getElementById("concat-rows");
+  data.results.forEach((result) => {
+    let row = document.createElement("tr"),
+        header = document.createElement("td"),
+        body = document.createElement("td"),
+        prob = document.createElement("td");
+
+    header.innerText = result.headercomment;
+    row.appendChild(header);
+    body.innerText = result.bodycomment;
+    row.appendChild(body);
+    prob.innerText = (result.probability * 1).toFixed(2);
+    row.appendChild(prob);
+
+    composeTable.appendChild(row);
+  });
+});
+
+fetch("./dbcompose.json").then(res => res.json()).then(data => {
+  let composeTable = document.getElementById("compose-rows");
+  data.results.forEach((result) => {
+    let row = document.createElement("tr"),
+        header = document.createElement("td"),
+        body = document.createElement("td"),
+        prob = document.createElement("td");
+
+    header.innerText = result.headercomment;
+    row.appendChild(header);
+    body.innerText = result.bodycomment;
+    row.appendChild(body);
+    prob.innerText = (result.probability * 1).toFixed(2);
+    row.appendChild(prob);
+
+    composeTable.appendChild(row);
+  });
+});
+    </script>
+  </body>
+</html>
